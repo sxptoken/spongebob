@@ -40,12 +40,12 @@ try {
       banner = document.createElement("aside");
       banner.setAttribute("role", "status");
       banner.setAttribute("aria-live", "polite");
-      banner.style.cssText = "position:fixed;top:12px;left:50%;transform:translateX(-50%);width:min(680px,calc(100vw - 24px));box-sizing:border-box;display:flex;align-items:flex-start;gap:12px;padding:14px 16px;background:#170d28;color:#fff;border:1px solid rgba(177,115,255,.65);border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.45);z-index:2147483000;font:14px/1.45 system-ui,sans-serif";
+      banner.style.cssText = "position:fixed;top:12px;left:50%;transform:translateX(-50%);width:min(680px,calc(100vw - 24px));box-sizing:border-box;display:flex;align-items:flex-start;gap:12px;padding:14px 16px;background:linear-gradient(145deg,rgba(20,22,28,.98),rgba(10,12,16,.98));color:#eef0f3;border:1px solid rgba(148,156,170,.45);border-radius:16px;box-shadow:0 16px 48px rgba(0,0,0,.45),inset 0 1px rgba(255,255,255,.04);backdrop-filter:blur(18px);z-index:2147483000;font:14px/1.45 Inter,system-ui,sans-serif";
       const content = document.createElement("div");
       content.style.cssText = "flex:1;min-width:0;white-space:pre-wrap;overflow-wrap:anywhere";
       const heading = document.createElement("strong");
-      heading.textContent = "📢 czX Announcement";
-      heading.style.cssText = "display:block;margin-bottom:4px;color:#d7b8ff";
+      heading.textContent = "📢 Secret Web Announcement";
+      heading.style.cssText = "display:block;margin-bottom:4px;color:#c2c9d3;font-weight:850;letter-spacing:-.2px";
       const message = document.createElement("div");
       message.dataset.announcementMessage = "true";
       content.append(heading, message);
@@ -53,7 +53,7 @@ try {
       close.type = "button";
       close.textContent = "×";
       close.setAttribute("aria-label", "Dismiss announcement");
-      close.style.cssText = "flex:0 0 auto;border:0;background:transparent;color:#fff;font-size:24px;line-height:1;cursor:pointer;padding:0 2px";
+      close.style.cssText = "flex:0 0 auto;border:0;border-radius:8px;background:rgba(148,156,170,.12);color:#eef0f3;font-size:23px;line-height:1;cursor:pointer;padding:2px 6px;transition:background .15s";
       close.addEventListener("click", () => {
         try { sessionStorage.setItem("czxAnnouncementDismissed", currentStamp); } catch {}
         removeBanner();
@@ -66,5 +66,5 @@ try {
 
   onValue(ref(db, "czxAnnouncements/current"), snap => showBanner(snap.val()), () => removeBanner());
 } catch (error) {
-  console.error("czX announcements could not start:", error);
+  console.error("Secret Web announcements could not start:", error);
 }
