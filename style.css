@@ -495,3 +495,9 @@ footer{color:#6e7783!important;padding:12px 0 20px!important}
  .home-minimal .home-feature-icon{width:48px!important;height:48px!important;margin:0!important;font-size:23px!important;border-radius:14px!important}
  .home-minimal .home-feature-title{font-size:15px!important}
 }
+
+
+/* Secret Web V3 title above the homepage shortcuts */
+.home-minimal .home-version-title{margin:0 0 30px!important;text-align:center!important;color:#f0f2f5!important;font-size:clamp(30px,4vw,46px)!important;line-height:1.1!important;font-weight:900!important;letter-spacing:-1.8px!important;text-shadow:0 8px 28px rgba(0,0,0,.22)!important}
+.home-minimal .home-version-title span{color:#aeb8c5!important}
+@media(max-width:700px){.home-minimal .home-version-title{font-size:34px!important;margin-bottom:22px!important;letter-spacing:-1.2px!important}}
