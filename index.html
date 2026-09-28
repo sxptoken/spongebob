@@ -210,6 +210,7 @@ devModeButton.addEventListener("click",()=>{devPasswordOverlay.hidden=false;devP
       reader.readAsDataURL(file);
     });
     removeProfileButton.addEventListener("click",()=>{localStorage.removeItem("czxProfilePicture");profileFile.value="";profileMessage.textContent="Profile picture removed.";updateAccountUI()});signOutButton.addEventListener("click",()=>{localStorage.removeItem("czxAccount");accountUsername.value="";accountPassword.value="";setAccountMode("signin");updateAccountUI()});setAccountMode("signin");updateAccountUI();
+    const savedWallpaper=localStorage.getItem("czxWallpaper");if(savedWallpaper)setWallpaper(savedWallpaper);
     const aiButton=document.getElementById("aiButton"),aiOverlay=document.getElementById("aiOverlay"),closeAi=document.getElementById("closeAi"),aiForm=document.getElementById("aiForm"),aiInput=document.getElementById("aiInput"),aiMessages=document.getElementById("aiMessages"),aiStatus=document.getElementById("aiStatus"),aiSend=document.getElementById("aiSend");const aiHistory=[];
     function addAiMessage(text,role){const el=document.createElement("div");el.className="ai-message "+(role==="user"?"ai-user":"ai-bot");el.textContent=text;aiMessages.appendChild(el);aiMessages.scrollTop=aiMessages.scrollHeight}
     function openAi(){aiOverlay.hidden=false;setTimeout(()=>aiInput.focus(),30)}
