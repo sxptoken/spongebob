@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Chat • czX</title>
+<title>Chat • Secret Web</title>
 <link rel="stylesheet" href="/style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,13 +28,59 @@
 .font-check{opacity:0;color:#bd8aff;font-weight:900}.font-option.selected .font-check{opacity:1}
 .font-preview{font-size:14px}
 @media(max-width:600px){.chat-page{padding-top:85px}.chat-card{height:calc(100vh - 140px);min-height:460px;padding:16px}.chat-message{max-width:90%}.font-picker{top:78px;right:15px;width:235px}}
+
+/* Secret Web chat theme — slate, silver, and clean spacing */
+body{background:#0b0d11!important;color:#eef0f3!important}
+body:before{background:radial-gradient(ellipse at 50% 0%,rgba(148,156,170,.12),transparent 42%),linear-gradient(180deg,#0e1015 0%,#090a0e 100%)!important}
+body:after{opacity:.08!important}
+.topbar{background:rgba(17,19,25,.9)!important;border-color:rgba(169,178,191,.16)!important;box-shadow:0 12px 35px rgba(0,0,0,.22),inset 0 1px rgba(255,255,255,.035)!important}
+.brand{color:#f0f2f5!important;text-shadow:none!important}
+.brand-star{color:#b7c0cc!important;filter:none!important}
+.nav-link{color:#a8afb9!important}
+.nav-link:hover,.nav-link.active{background:#252932!important;border-color:rgba(190,199,211,.15)!important;color:#fff!important;box-shadow:none!important}
+.chat-page{width:min(1120px,calc(100% - 48px))!important;min-height:calc(100vh - 45px)!important;padding:34px 0 32px!important}
+.chat-card{height:min(800px,calc(100vh - 70px))!important;min-height:520px!important;padding:26px!important;border:1px solid rgba(174,184,198,.18)!important;border-radius:22px!important;background:linear-gradient(145deg,rgba(20,23,29,.98),rgba(13,15,20,.98))!important;box-shadow:0 24px 70px rgba(0,0,0,.3),inset 0 1px rgba(255,255,255,.035)!important}
+.chat-head{padding-bottom:18px!important;border-bottom:1px solid rgba(174,184,198,.12)!important;margin-bottom:12px!important}
+.chat-head h1{font-size:25px!important;letter-spacing:-.7px!important;color:#f1f3f6!important}
+.chat-head p{margin-top:5px!important;color:#8f98a5!important;font-size:12px!important}
+.chat-head .settings-label{color:#aeb8c5!important;letter-spacing:2px!important}
+.font-button{background:#242831!important;border-color:rgba(174,184,198,.2)!important;color:#e9edf2!important}
+.font-button:hover{background:#2c313b!important;border-color:rgba(190,199,211,.42)!important}
+.chat-messages{gap:13px!important;padding:16px 5px!important;scrollbar-color:#505762 #15181e!important}
+.chat-message{border-radius:15px!important;padding:12px 15px!important;box-shadow:0 5px 18px rgba(0,0,0,.1)!important;overflow-wrap:anywhere}
+.chat-bot{background:#242831!important;color:#edf0f4!important;border:1px solid rgba(174,184,198,.12)!important}
+.chat-user{background:#525c6b!important;color:#fff!important;border:1px solid rgba(207,215,225,.16)!important}
+.chat-pfp{border-color:rgba(174,184,198,.28)!important;background:#242831!important}
+.chat-pfp-fallback{color:#e7ebf0!important}
+.chat-form{gap:10px!important;margin-top:14px!important}
+.chat-input{margin:0!important;min-height:44px!important;border:1px solid rgba(174,184,198,.25)!important;border-radius:12px!important;background:#0e1015!important;color:#f2f4f7!important}
+.chat-input:focus{border-color:#9da8b7!important;box-shadow:0 0 0 3px rgba(174,184,198,.1)!important}
+.chat-input::placeholder{color:#737d8a!important}
+.chat-image-button{min-width:42px!important;border-color:rgba(174,184,198,.2)!important;border-radius:12px!important;background:#242831!important;color:#eef0f3!important}
+.chat-image-button:hover{background:#303641!important;border-color:rgba(190,199,211,.4)!important}
+.chat-send,.save-button{background:#aeb7c4!important;color:#14171d!important;box-shadow:none!important;border-radius:12px!important}
+.chat-send:hover,.save-button:hover{background:#c3cad4!important}
+.chat-status{color:#858e9b!important}
+.chat-image-preview{background:#20242b!important;color:#c3cad4!important}
+.chat-image-preview button{color:#e0e5eb!important}
+.font-picker{border-color:rgba(174,184,198,.2)!important;border-radius:16px!important;background:rgba(18,21,27,.98)!important;box-shadow:0 22px 70px rgba(0,0,0,.6)!important}
+.font-picker-title{color:#aeb8c5!important}
+.font-option{color:#edf0f4!important}
+.font-option:hover,.font-option.selected{background:rgba(174,184,198,.1)!important;border-color:rgba(174,184,198,.25)!important}
+.font-check{color:#c5cdd7!important}
+@media(max-width:600px){
+ .chat-page{width:calc(100% - 20px)!important;padding:18px 0 20px!important;min-height:calc(100vh - 30px)!important}
+ .chat-card{height:calc(100dvh - 40px)!important;min-height:440px!important;padding:15px!important;border-radius:17px!important}
+ .chat-head h1{font-size:23px!important}
+}
+
 </style>
 <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 <header class="topbar">
-<a class="brand" href="/" aria-label="czX home"><span class="brand-star">✦</span><span>czX</span></a>
+<a class="brand" href="/" aria-label="Secret Web home"><span class="brand-star">✦</span><span>Secret Web</span></a>
 <nav class="main-nav" aria-label="Main navigation">
 <a class="nav-link" href="/">⌂ <span>Home</span></a>
 <a class="nav-link" href="/games.html">🎮 <span>Games</span></a>
@@ -46,14 +92,14 @@
 <main class="chat-page">
 <section class="chat-card">
 <div class="chat-head">
-  <div><span class="settings-label">CZ X CHAT</span><h1>Chat</h1><p>Talk with other people on czX.</p></div>
+  <div><span class="settings-label">SECRET WEB</span><h1>Chat</h1><p>Chat</p></div>
   <div class="chat-head-actions">
     <button class="font-button" id="fontButton" type="button">Aa Fonts</button>
     <a class="secondary-button" href="/">Home</a>
   </div>
 </div>
 
-<div class="chat-messages" id="messages" aria-live="polite"><div class="chat-message chat-bot">Create or sign in to your czX account before using chat.</div></div>
+<div class="chat-messages" id="messages" aria-live="polite"><div class="chat-message chat-bot">Create or sign in to your Secret Web account before using chat.</div></div>
 <div class="chat-image-preview" id="imagePreview"><span id="imagePreviewName">File selected</span><button type="button" id="removeImage" aria-label="Remove image">✕</button></div>
 <form class="chat-form" id="form"><input class="text-input chat-input" id="input" maxlength="500" placeholder="Type a message..." autocomplete="off" disabled><input type="file" id="imageInput" accept="*/*" hidden><button class="chat-image-button" id="imageButton" type="button" title="Send file" disabled>↑</button><button class="save-button chat-send" id="send" type="submit" disabled>Send</button></form>
 <div class="chat-status" id="status" aria-live="polite"></div>
