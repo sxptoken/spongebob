@@ -1,4 +1,4 @@
-const SITE_PASSWORD = "cxZ1!";
+const SITE_PASSWORD = "scweb";
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
