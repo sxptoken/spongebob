@@ -1,4 +1,4 @@
-const SITE_PASSWORD = "scweb";
+const SITE_PASSWORD = String.fromCharCode(97,99,117,110,97,116,104,101,103,111,97,116);
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
